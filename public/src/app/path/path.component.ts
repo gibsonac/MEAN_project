@@ -51,15 +51,15 @@ export class PathComponent implements OnInit {
   clickNhover(divId) {
     if (this.mousedown) {
       if (divId != 'startBox63') {
-        (document.querySelector(`#${divId}`) as HTMLElement).style.background = "red";
+        if ((document.querySelector(`#${divId}`) as HTMLElement).style.background == "red") {
+          (document.querySelector(`#${divId}`) as HTMLElement).style.background = "white";
+        }
+        else {
+          (document.querySelector(`#${divId}`) as HTMLElement).style.background = "red";
+        }
       }
     }
-    else{
-      if (divId != 'startBox63') {
-      (document.querySelector(`#${divId}`) as HTMLElement).style.background = "white";
-    }
   }
-}
   MouseUp() {
     this.mousedown = false;
   }
