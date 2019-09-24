@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Sanitizer, SecurityContext } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { HttpService } from './../http.service';
-import { NgForOf } from '@angular/common';
+
 
 
 @Component({
@@ -54,7 +54,12 @@ export class PathComponent implements OnInit {
         (document.querySelector(`#${divId}`) as HTMLElement).style.background = "red";
       }
     }
+    else{
+      if (divId != 'startBox63') {
+      (document.querySelector(`#${divId}`) as HTMLElement).style.background = "white";
+    }
   }
+}
   MouseUp() {
     this.mousedown = false;
   }
