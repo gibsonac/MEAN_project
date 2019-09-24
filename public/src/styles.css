@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+/* .babyBox { 
+    border: 2px solid black;  
+    width: 40px; 
+    height: 40px;
+} */
+#startBox63 {
+    border: 1px solid black; background: black; width: 40px; height: 40px;
+}

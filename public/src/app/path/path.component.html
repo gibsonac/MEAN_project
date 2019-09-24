@@ -1,0 +1,48 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+
+        // $(document).getElementById('babyBox')
+        </script>
+    <style>
+
+    </style>
+</head>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-md-4">
+            <div class="theKey" style="margin: 5px; border: 2px solid black; width: 23vw; height: 50vw;">
+                <p>here are the key details</p>
+            </div>
+        </div>
+        <!-- <div class="col col-md-8">
+            <div class="theDisplay" id="theDisplay" (mousedown)="MouseDown()" (mouseup)="MouseUp()">
+                <div *ngFor="let divRow of theDivs" class="row">
+                    <div *ngFor="let div of divRow">
+                        <div *ngIf="mousedown; else notMouseDown" id="{{div}}" (mouseenter)="clickNhover(div)"
+                            style="border: 1px solid red; width: 40px; height: 40px;">
+                        </div>
+                        <ng-template #notMouseDown>
+                            <div id="div" style="border: 1px solid black; width: 40px; height: 40px;"></div>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="col col-md-8">
+            <div class="theDisplay" id="theDisplay" (mousedown)="MouseDown()" (mouseup)="MouseUp()">
+                <div *ngFor="let divRow of theDivs" class="row">
+                    <div *ngFor="let div of divRow">
+                        <div id="{{div}}" (mouseenter)="clickNhover(div)"
+                            style="border: 1px solid black; width: 40px; height: 40px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="theDisplay" id="theDisplay" [innerHTML]="theDivs | keepHtml">
+
+            </div> -->
+    </div>
+</div>
