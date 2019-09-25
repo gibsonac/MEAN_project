@@ -13,6 +13,7 @@ import { BSTComponent } from './bst/bst.component';
 import { SortComponent } from './sort/sort.component';
 import { SllComponent } from './sll/sll.component';
 import { KeepHtmlPipe } from './pipes/keep-html.pipe';
+import { GreedyComponent } from './greedy/greedy.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { KeepHtmlPipe } from './pipes/keep-html.pipe';
     BSTComponent,
     SortComponent,
     SllComponent,
-    KeepHtmlPipe
+    KeepHtmlPipe,
+    GreedyComponent
   ],
   imports: [
     BrowserModule,
