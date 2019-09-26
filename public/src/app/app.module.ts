@@ -14,6 +14,7 @@ import { SortComponent } from './sort/sort.component';
 import { SllComponent } from './sll/sll.component';
 import { KeepHtmlPipe } from './pipes/keep-html.pipe';
 import { GreedyComponent } from './greedy/greedy.component';
+import { BubbleComponent } from './bubble/bubble.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { GreedyComponent } from './greedy/greedy.component';
     SortComponent,
     SllComponent,
     KeepHtmlPipe,
-    GreedyComponent
+    GreedyComponent,
+    BubbleComponent
   ],
   imports: [
     BrowserModule,
