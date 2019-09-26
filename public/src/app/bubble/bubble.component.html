@@ -8,10 +8,12 @@
     <div class="row">
         <div class="col col-md-4">
             <div class="theKey"
-                style="margin: 5px; border: 2px solid black; width: 23vw; height: 50vw;display:inline-block;">
-                <p>here are the key details</p>
-                <button (click)="Bubblesort(theArray)">click to bubble sort fast!</button>
-                <button (click)="BubblesortStep(theArray)">click to go step by step!</button>
+                style="margin: 5px; border: 2px solid black; width: 23vw; height: 50vw;display:inline-block;padding: 10px;">
+                <h3>Bubble Sort</h3>
+                <p><b>Bubble Sort</b> is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements and swaps them if they are in the wrong order. The pass through the list is repeated until the list is sorted.</p>
+                <button class='btn btn-info' (click)="Bubblesort(theArray)">click to bubble sort fast!</button>
+                <p></p>
+                <button class='btn btn-warning' (click)="BubblesortStep(theArray)">click to go step by step!</button>
             </div>
         </div>
 

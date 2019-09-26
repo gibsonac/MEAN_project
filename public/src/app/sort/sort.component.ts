@@ -35,6 +35,7 @@ export class SortComponent implements OnInit {
     // this.displayGrid();
     this.makeGrid();
   }
+
   makeGrid(rows = 12, cols = 19) {
     for (var i = 0; i < rows; ++i) {
       var row = [];
@@ -99,41 +100,41 @@ export class SortComponent implements OnInit {
     if (foundit == false) {
       //we move upwards first
       if (x > 0) {
-        if (ArrayofObjects[x - 1][y].value == 0 && ArrayofObjects[x - 1][y].hasVisited == "false") {
-          ArrayofObjects[x - 1][y].hasVisited = "true";
+        if (ArrayofObjects[x - 1][y].value == 0 && ArrayofObjects[x - 1][y].hasVisited == 'false') {
+          ArrayofObjects[x - 1][y].hasVisited = 'true';
           ArrayofObjects[x - 1][y].count = count + 1;
           (document.querySelector(`#babyBox${x - 1}-${y}`) as HTMLElement).style.background = "purple";
           array.push([x - 1, y])
           foundit = this.SearchAround(ArrayofObjects, x - 1, y, count + 1, array, foundit)
         }
         if (ArrayofObjects[x - 1][y].value == 2) {
-          console.log("we hit a wall, waht do we do?");
+          console.log('we hit a wall, waht do we do?');
         }
-        if (ArrayofObjects[x - 1][y].value == 10 && ArrayofObjects[x - 1][y].hasVisited == "false") {
+        if (ArrayofObjects[x - 1][y].value == 10 && ArrayofObjects[x - 1][y].hasVisited == 'false') {
           foundit = true;
           ArrayofObjects[x - 1][y].finalArray = array;
-          console.log("we found it!!!!", x - 1, y, array, foundit)
+          console.log('we found it!!!!', x - 1, y, array, foundit)
           return foundit;
         }
       }
       ////now we do y+1, moving to the right
       if (foundit == false) {
         if (y < ArrayofObjects[x].length - 1) {
-          if (ArrayofObjects[x][y + 1].value == 0 && ArrayofObjects[x][y + 1].hasVisited == "false") {
-            ArrayofObjects[x][y + 1].hasVisited = "true";
+          if (ArrayofObjects[x][y + 1].value == 0 && ArrayofObjects[x][y + 1].hasVisited == 'false') {
+            ArrayofObjects[x][y + 1].hasVisited = 'true';
             ArrayofObjects[x][y + 1].count = count + 1;
             array.push([x, y + 1]);
             (document.querySelector(`#babyBox${x}-${y + 1}`) as HTMLElement).style.background = "purple";
             foundit = this.SearchAround(ArrayofObjects, x, y + 1, count + 1, array, foundit)
           }
           if (ArrayofObjects[x][y + 1].value == 2) {
-            console.log("we hit a wall, waht do we do?")
+            console.log('we hit a wall, waht do we do?')
 
           }
-          if (ArrayofObjects[x][y + 1].value == 10 && ArrayofObjects[x][y + 1].hasVisited == "false") {
+          if (ArrayofObjects[x][y + 1].value == 10 && ArrayofObjects[x][y + 1].hasVisited == 'false') {
             foundit = true;
             ArrayofObjects[x][y + 1].finalArray = array;
-            console.log("we found it!!!!", x, y + 1, array, foundit);
+            console.log('we found it!!!!', x, y + 1, array, foundit);
 
             return foundit;
           }
@@ -142,20 +143,20 @@ export class SortComponent implements OnInit {
       ////now we do x + 1, moving down
       if (foundit == false) {
         if (x < ArrayofObjects.length - 1) {
-          if (ArrayofObjects[x + 1][y].value == 0 && ArrayofObjects[x + 1][y].hasVisited == "false") {
-            ArrayofObjects[x + 1][y].hasVisited = "true";
+          if (ArrayofObjects[x + 1][y].value == 0 && ArrayofObjects[x + 1][y].hasVisited == 'false') {
+            ArrayofObjects[x + 1][y].hasVisited = 'true';
             ArrayofObjects[x + 1][y].count = count + 1;
             array.push([x + 1, y]);
             (document.querySelector(`#babyBox${x + 1}-${y}`) as HTMLElement).style.background = "purple";
             foundit = this.SearchAround(ArrayofObjects, x + 1, y, count + 1, array, foundit)
           }
           if (ArrayofObjects[x + 1][y].value == 2) {
-            console.log("we hit a wall, waht do we do?")
+            console.log('we hit a wall, waht do we do?')
           }
-          if (ArrayofObjects[x + 1][y].value == 10 && ArrayofObjects[x + 1][y].hasVisited == "false") {
+          if (ArrayofObjects[x + 1][y].value == 10 && ArrayofObjects[x + 1][y].hasVisited == 'false') {
             foundit = true;
             ArrayofObjects[x + 1][y].finalArray = array;
-            console.log("we found it!!!!", x + 1, y, array, foundit)
+            console.log('we found it!!!!', x + 1, y, array, foundit)
             return foundit;
           }
         }
@@ -164,20 +165,20 @@ export class SortComponent implements OnInit {
       ////now we do y+1, moving to the left
       if (foundit == false) {
         if (y > 0) {
-          if (ArrayofObjects[x][y - 1].value == 0 && ArrayofObjects[x][y - 1].hasVisited == "false") {
-            ArrayofObjects[x][y - 1].hasVisited = "true";
+          if (ArrayofObjects[x][y - 1].value == 0 && ArrayofObjects[x][y - 1].hasVisited == 'false') {
+            ArrayofObjects[x][y - 1].hasVisited = 'true';
             ArrayofObjects[x][y - 1].count = count + 1;
             array.push([x, y - 1]);
             (document.querySelector(`#babyBox${x}-${y - 1}`) as HTMLElement).style.background = "purple";
             foundit = this.SearchAround(ArrayofObjects, x, y - 1, count + 1, array, foundit)
           }
           if (ArrayofObjects[x][y - 1].value == 2) {
-            console.log("we hit a wall, waht do we do?")
+            console.log('we hit a wall, waht do we do?')
           }
-          if (ArrayofObjects[x][y - 1].value == 10 && ArrayofObjects[x][y - 1].hasVisited == "false") {
+          if (ArrayofObjects[x][y - 1].value == 10 && ArrayofObjects[x][y - 1].hasVisited == 'false') {
             foundit = true;
             ArrayofObjects[x][y - 1].finalArray = array;
-            console.log("we found it!!!!", x, y - 1, array, foundit)
+            console.log('we found it!!!!', x, y - 1, array, foundit)
             return foundit;
           }
         }
@@ -198,16 +199,13 @@ export class SortComponent implements OnInit {
     this.SearchAround(ArrayofObjects, xCoordinate, yCoordinate, count, array, foundit);
     var anArray = ArrayofObjects[6][15].finalArray;
     console.log("here is the array!", anArray);
-
     var blah = 3000
 
     for (let x = 0; x < anArray.length; x++) {
       this.timeout(anArray, x);
-
     }
 
   }
-
   timeout(anArray, i) {
     if (i == 0) {
       var blah = 250;
