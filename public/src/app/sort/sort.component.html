@@ -9,41 +9,35 @@
     </style>
 </head>
 
-<!-- <div class="container"> -->
-<div class="row">
-    <div class="col col-md-3">
-        <div class="theKey" style="margin: 5px; border: 2px solid black; width: 23vw; height: 50vw;">
-            <p>here are the key details</p>
-            <button (click)="GoHome(theArray, 6, 3, 0)">click to search!</button>
-        </div>
-    </div>
-    <!-- <div class="col col-md-8">
-                <div class="theDisplay" id="theDisplay" (mousedown)="MouseDown()" (mouseup)="MouseUp()">
-                    <div *ngFor="let divRow of theDivs" class="row">
-                        <div *ngFor="let div of divRow">
-                            <div *ngIf="mousedown; else notMouseDown" id="{{div}}" (mouseenter)="clickNhover(div)"
-                                style="border: 1px solid red; width: 40px; height: 40px;">
-                            </div>
-                            <ng-template #notMouseDown>
-                                <div id="div" style="border: 1px solid black; width: 40px; height: 40px;"></div>
-                            </ng-template>
-                        </div>
-                    </div>
+<div class="container">
+    <div class="row">
+        <div class="col col-md-4">
+            <div class="theKey" style="margin: 5px; border: 2px solid black; width: 23vw; height: 50vw;">
+                <div class="container">
+                    <br>
+                    <h3>Depth First Search</h3>
+                    <br>
+                    <p>See the "depth first" algorithm. This utilizes recursion, it is an inefficient search pattern,
+                        but
+                        effective. </p>
                 </div>
-            </div> -->
-    <div class="col col-md-9">
-        <div class="theDisplay" id="theDisplay">
-            <div *ngFor="let divRow of theDivs" class="row">
-                <div *ngFor="let div of divRow" (mousedown)="MouseDown(div)" (mouseup)="MouseUp()">
-                    <div id="{{div}}" (mouseenter)="clickNhover(div)"
-                        style="border: 1px solid black; width: 40px; height: 40px;">
+                <br>
+                <br>
+                <div class="text-center">
+                    <button (click)="GoHome(theArray, 6, 3, 0)">click to search!</button>
+                </div>
+            </div>
+        </div>
+        <div class="col col-md-8">
+            <div class="theDisplay" id="theDisplay">
+                <div *ngFor="let divRow of theDivs" class="row">
+                    <div *ngFor="let div of divRow" (mousedown)="MouseDown(div)" (mouseup)="MouseUp()">
+                        <div id="{{div.id}}" (mouseenter)="clickNhover(div)"
+                            style="border: 1px solid black; width: 40px; height: 40px;">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- <div class="theDisplay" id="theDisplay" [innerHTML]="theDivs | keepHtml">
-    
-                </div> -->
 </div>
-<!-- </div> -->
