@@ -1,0 +1,29 @@
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+</head>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-md-4">
+            <div class="theKey"
+                style="margin: 5px; border: 2px solid black; width: 23vw; height: 50vw;display:inline-block;">
+                <p>here are the key details</p>
+                <button (click)="Bubblesort(theArray)">click to bubble sort fast!</button>
+                <button (click)="BubblesortStep(theArray)">click to go step by step!</button>
+            </div>
+        </div>
+
+        <div class="col col-md-8">
+            <div class="theDisplay" id="theDisplay">
+                <div *ngFor="let divRow of theArray" class="row">
+                    <div *ngFor="let object of divRow">
+                        <div id="{{object.id}}"
+                            style=" border: 1px solid black; width: 50px; height: 50px;margin-left: 2px; text-align: center;">
+                            {{object.value}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>

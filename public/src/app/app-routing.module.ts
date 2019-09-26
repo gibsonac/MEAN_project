@@ -5,6 +5,9 @@ import { PathComponent } from './path/path.component';
 import { BSTComponent } from './bst/bst.component';
 import { SortComponent } from './sort/sort.component';
 import { SllComponent } from './sll/sll.component';
+import { GreedyComponent } from './greedy/greedy.component';
+import { BubbleComponent } from './bubble/bubble.component';
+
 
 
 const routes: Routes = [
@@ -12,7 +15,9 @@ const routes: Routes = [
   { path: 'path', component: PathComponent},
   {path: 'bst', component: BSTComponent},
   {path: 'sort', component: SortComponent},
-  {path: 'sll', component: SllComponent}
+  {path: 'sll', component: SllComponent},
+  {path: 'greedy', component: GreedyComponent},
+  {path: 'bubble', component: BubbleComponent}
 ];
 
 @NgModule({

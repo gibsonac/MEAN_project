@@ -1,1 +1,43 @@
-<p>sort works!</p>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+
+            // $(document).getElementById('babyBox')
+        </script>
+    <style>
+
+    </style>
+</head>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-md-4">
+            <div class="theKey" style="margin: 5px; border: 2px solid black; width: 23vw; height: 50vw;">
+                <div class="container">
+                    <br>
+                    <h3>Depth First Search</h3>
+                    <br>
+                    <p>See the "depth first" algorithm. This utilizes recursion, it is an inefficient search pattern,
+                        but
+                        effective. </p>
+                </div>
+                <br>
+                <br>
+                <div class="text-center">
+                    <button (click)="GoHome(theArray, 6, 3, 0)">click to search!</button>
+                </div>
+            </div>
+        </div>
+        <div class="col col-md-8">
+            <div class="theDisplay" id="theDisplay">
+                <div *ngFor="let divRow of theDivs" class="row">
+                    <div *ngFor="let div of divRow" (mousedown)="MouseDown(div)" (mouseup)="MouseUp()">
+                        <div id="{{div.id}}" (mouseenter)="clickNhover(div)"
+                            style="border: 1px solid black; width: 40px; height: 40px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
